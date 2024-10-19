@@ -30,9 +30,9 @@ const convert = () =>{
 
 
 return (
-  <><div className="w-full h-screen flex flex-wrap justify-center items-center bg-cover px-40 ">
-    <img className="absolute bg-cover w-full h-full" src={Fn}></img>
-    <div className="w-full p-8 backdrop-blur-sm">
+  <><div className="w-full h-screen flex flex-wrap justify-center items-center bg-cover px-2 sm:px-40 ">
+    <img className="absolute object-cover w-full h-full" src={Fn}></img>
+    <div className="w-full  sm:p-8  backdrop-blur-sm">
       <form onSubmit={(e)=>{
         e.preventDefault();
   convert();
