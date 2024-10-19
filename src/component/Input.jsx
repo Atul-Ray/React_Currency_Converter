@@ -15,6 +15,15 @@ className=""
 }={}){
     
 
+  const handleAmountChange = (e) => {
+    const value = Number(e.target.value);
+    if (value === 0) {
+      onAmountChange && onAmountChange('');
+    } else {
+      onAmountChange && onAmountChange(value);
+    }
+  };
+
   const inputid=useId();
 
 return (
@@ -28,7 +37,8 @@ return (
    placeholder="Amount"
    disabled={amountDisable}
    value={amount}
-  onChange={(e)=>onAmountChange && onAmountChange(Number(e.target.value))}
+   onChange={handleAmountChange}
+
   
    
    />
